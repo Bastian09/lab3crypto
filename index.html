@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio SHA-256</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      display: flex;
+      justify-content: center;
+      padding: 50px 15px;
+    }
+    main {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px #0002;
+    }
+    h1 { text-align: center; font-size: 24px; }
+    h2 { font-size: 19px; margin-top: 30px; }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 7px 0;
+      box-sizing: border-box;
+      border-radius: 6px;
+    }
+    input { border: 1px solid #ccc; }
+    button {
+      background: #2455ad;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #173d83; }
+    #resultado { overflow-wrap: anywhere; }
+    .aviso { font-size: 12px; color: #666; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Laboratorio SHA-256</h1>
+    <p>Sistema de autenticación de prueba</p>
+
+    <h2>Register - Registro</h2>
+    <form id="registro">
+      <input id="regUsuario" placeholder="Usuario" required>
+      <input id="regPassword" type="password"
+             placeholder="Contraseña" required>
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <h2>Login - Inicio de sesión</h2>
+    <form id="login">
+      <input id="loginUsuario" placeholder="Usuario" required>
+      <input id="loginPassword" type="password"
+             placeholder="Contraseña" required>
+      <button type="submit">Iniciar sesión</button>
+    </form>
+
+    <h2>Resultado</h2>
+    <p id="resultado">Esperando operación...</p>
+
+    <p class="aviso">
+      Entorno educativo local. No utilizar contraseñas reales.
+      SHA-256 sin sal no es adecuado para proteger
+      contraseñas en producción.
+    </p>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
